@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/x-icon" href="/Images/controller_favicon.png">
+    <script src="https://kit.fontawesome.com/1658b68c96.js" crossorigin="anonymous"></script>
+    <script src="catalog.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <section class="header_container">
+            <a href="home.html">
+                <img class="logo" src="Images/metacritic_logo.png" alt="Metacritic Logo" width="176" height="40">
+            </a>
+            <nav class="combined">
+                <a class="category" href="contact.html">Contact</a>
+                <a class="category" href="about.html">About</a>
+            </nav>
+            <div class="combined">
+                <a href="login.html"><button class="logout_button" type="button">Log Out</button></a>
+                <a href="cart.html"><i class="fa-solid fa-cart-shopping"></i></a>
+            </div>
+        </section>
+    </header>
+    <h1 class="nav_title">Contact Me</h1>
+    <h2 class="nav_heading">We will get back to you shortly.</h2>
+    <section class="form_section">
+        <form class="contact_form">
+            <label class="email_label" for="email">Email address</label>
+            <input class="email_input" type="email" id="email" placeholder="Enter email">
+            <label class="concern_label" for="concern">What is your concern?</label>
+            <textarea class="concern_area" id="concern_area" rows="10" cols="32"
+                placeholder="I need help..."></textarea>
+            <button class="email_submit" type="submit">Submit</button>
+        </form>
+    </section>
+</body>
+
+</html>

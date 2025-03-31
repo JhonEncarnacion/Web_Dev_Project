@@ -1,0 +1,1 @@
+promise.then(phrase => console.log(phrase), error => console.log("Unfortunate..." + error));

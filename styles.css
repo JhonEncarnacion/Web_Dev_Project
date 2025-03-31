@@ -1,0 +1,746 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --dark_gray: #404040;
+  --light_gray: rgb(160, 160, 160);
+  --green_rating: #00ce7b;
+  --light_green_rating: #00de76;
+  --spacing: 50px;
+}
+
+@font-face {
+  font-family: "Product Sans Regular";
+  font-style: normal;
+  font-weight: normal;
+  src: local("Product Sans Regular"),
+    url("fonts/ProductSans-Regular.woff") format("woff");
+}
+
+body {
+  font-family: "Product Sans Regular";
+  padding-bottom: var(--spacing);
+}
+
+header {
+  padding: 0 6rem;
+  background-color: black;
+}
+
+main {
+  padding: 0 6rem;
+}
+
+hr {
+  width: 96%;
+  background-color: black;
+  height: 0.7px;
+  border: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.nav_title,
+.login_title,
+.register_title,
+.cart_title,
+.thank_you_title,
+.checkout_title {
+  font-size: 4rem;
+  margin: 2rem;
+  text-align: center;
+}
+
+.nav_heading,
+.login_heading,
+.register_heading,
+.cart_heading,
+.thank_you_heading,
+.checkout_heading {
+  font-size: 2rem;
+  font-weight: 500;
+  margin: 2rem;
+  text-align: center;
+}
+
+.thank_you_heading,
+.thank_you_title {
+  margin: 1rem;
+}
+
+.form_section,
+.login_section,
+.register_section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.contact_form,
+.login_form,
+.register_form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+  padding: var(--spacing);
+  margin: var(--spacing);
+  margin-top: 0px;
+  background-color: lightgray;
+  border-radius: 5px;
+  text-align: center;
+  width: 500px;
+}
+
+.email_label,
+.login_username_label,
+.register_username_label {
+  font-size: 1.5rem;
+}
+
+.email_input,
+.email_submit,
+.login_username_input,
+.login_submit,
+.register_username_input,
+.register_submit,
+.continue_shopping,
+.checkout_yes,
+.checkout_no {
+  font-size: 1rem;
+  padding: 10px;
+  border-radius: 5px;
+  border: 2px solid black;
+  outline: none;
+  background-color: white;
+  width: 300px;
+  font-family: inherit;
+}
+
+.email_submit,
+.login_submit,
+.register_submit,
+.continue_shopping {
+  cursor: pointer;
+  background-color: black;
+  color: white;
+}
+
+.email_submit:hover,
+.login_submit:hover,
+.register_submit:hover,
+.continue_shopping:hover {
+  background-color: rgb(30, 30, 30);
+}
+
+.login_password_label,
+.register_password_label {
+  margin-top: var(--spacing);
+  font-size: 1.5rem;
+}
+
+.concern_label {
+  margin-top: 20px;
+  font-size: 1.5rem;
+}
+
+.login_password_label,
+.register_password_label {
+  margin-top: 10px;
+}
+
+.concern_area,
+.login_password_input,
+.register_password_input {
+  border: 2px solid black;
+  border-radius: 5px;
+  padding: 10px;
+  font-family: inherit;
+  font-size: 1rem;
+  width: 300px;
+}
+
+.concern_area:focus {
+  outline: none;
+}
+
+.login_submit,
+.register_submit,
+.continue_shopping {
+  margin-top: 20px;
+}
+
+.register_link_text,
+.login_link_text {
+  color: black;
+  margin-top: 20px;
+}
+
+.register_link_text:hover,
+.login_link_text:hover {
+  color: rgb(100, 100, 100);
+}
+
+.continue_shopping {
+  text-align: center;
+  margin-top: 50px;
+}
+
+#thank_you {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.header_container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 4rem;
+  width: 96%;
+}
+
+.logo {
+  height: auto;
+}
+
+.categories {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 2rem;
+  margin: 0 3rem;
+}
+
+.category {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  padding: 0.8rem 1rem;
+  border-radius: 7px;
+}
+
+.category:hover {
+  color: black;
+  background-color: white;
+}
+
+.combined {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.logout_button {
+  text-decoration: none;
+  color: black;
+  background-color: #ffbd3f;
+  font-weight: bold;
+  font-size: inherit;
+  font-family: inherit;
+  padding: 0.8rem 0.7rem;
+  border-radius: 7px;
+  border: none;
+}
+
+.logout_button:hover {
+  background-color: #ffcd3f;
+}
+
+.fa-cart-shopping {
+  color: white;
+  font-size: 1.5rem;
+  padding: 0.5rem 0.8rem;
+  border: 2px solid white;
+  border-radius: 7px;
+  cursor: pointer;
+}
+
+.fa-cart-shopping:hover {
+  background-color: rgb(50, 50, 50);
+}
+
+.games_heading_container {
+  margin-top: 2rem;
+}
+
+.games_heading {
+  display: inline-block;
+  font-size: 6.5rem;
+  font-weight: 900;
+  background-image: url("Images/metacritic_colorful_background.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.games_tagline {
+  font-size: 1.5rem;
+  font-weight: 100;
+  color: #585858;
+  line-height: 0.5;
+}
+
+.list_container {
+  width: 100%;
+}
+
+.list_heading_container {
+  margin-top: 3rem;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 1rem;
+  line-height: 3rem;
+}
+
+.game_collection_container {
+  display: flex;
+  margin-top: 1.5rem;
+  gap: 1rem;
+}
+
+.game_container {
+  max-width: 163px;
+}
+
+.game_details_container {
+  display: flex;
+  flex-flow: column nowrap;
+  gap: 5px;
+  line-height: 1.5rem;
+}
+
+.game_cover {
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+.game_title {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: inherit;
+  line-height: 2rem;
+  color: var(--dark_gray);
+  font-weight: 600;
+  text-underline-offset: 0.2rem;
+  text-decoration-color: rgb(150, 150, 150);
+  text-decoration-thickness: 1px;
+  text-decoration-line: underline;
+}
+
+.game_rating_info {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.game_rating {
+  background-color: var(--green_rating);
+  color: black;
+  font-weight: 600;
+  font-size: 12px;
+  padding: 0 5px;
+  border-radius: 2px;
+}
+
+.game_rating_status {
+  color: gray;
+  font-size: 12px;
+}
+
+.game_title:hover,
+.game_rating:hover,
+.game_rating_status:hover {
+  text-decoration-line: none;
+  color: rgb(140, 140, 140);
+}
+
+.tbd_game_details_container {
+  cursor: pointer;
+}
+
+.tbd_rating {
+  display: inline-block;
+  margin-top: 5px;
+  padding: 3px 1px;
+  border: 2px solid gray;
+  color: black;
+  font-weight: 600;
+  font-size: 12px;
+  border-radius: 2px;
+}
+
+.tbd_rating:hover {
+  color: rgb(140, 140, 140);
+}
+
+.system_collection_container {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.system {
+  color: var(--light_gray);
+  padding: 1rem 0;
+}
+
+.system:first-of-type {
+  border-top: 1.5px solid gray;
+  color: black;
+  font-weight: 600;
+}
+
+.wide_game_rating_site {
+  display: flex;
+  flex-direction: column;
+  max-height: 136px;
+}
+
+.wide_game_collection_container {
+  display: flex;
+  gap: 2rem;
+  margin: 1.5rem 0;
+}
+
+.wide_game_container {
+  display: flex;
+  gap: 1rem;
+  width: 26rem;
+}
+
+.small_game_cover {
+  border-radius: 10px;
+}
+
+.wide_game_details {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+  grid-template-rows: 3fr 2fr;
+  max-height: 132px;
+  width: inherit;
+}
+
+.wide_game_title {
+  color: var(--dark_gray);
+  max-height: 132px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  line-height: 1.7rem;
+  font-weight: 500;
+  font-size: 23px;
+  text-underline-offset: 0.2rem;
+  text-decoration-color: rgb(150, 150, 150);
+  text-decoration-thickness: 1px;
+  text-decoration-line: underline;
+}
+
+.wide_game_rating {
+  font-size: 2.5rem;
+  font-weight: 700;
+  padding: 1rem;
+  background-color: var(--green_rating);
+  color: black;
+  border-radius: 10px;
+  justify-self: flex-end;
+  align-self: flex-start;
+}
+
+.wide_game_system {
+  color: var(--light_gray);
+  font-size: 0.8rem;
+  font-weight: thin;
+  border: 1px solid var(--light_gray);
+  border-radius: 5px;
+  padding: 4px 8px;
+  justify-self: flex-start;
+  align-self: center;
+}
+
+.wide_game_rating_status {
+  color: gray;
+  font-size: 0.8rem;
+  margin: 1rem 0.7rem 0 0;
+  justify-self: flex-end;
+  align-self: flex-start;
+}
+
+.green_bar_container {
+  width: inherit;
+}
+
+.green_bar {
+  border: 4px solid var(--green_rating);
+  border-radius: 4px;
+  justify-self: right;
+  margin-left: 105px;
+}
+
+.solopage_container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  padding-top: var(--spacing);
+}
+
+.solopage_cover {
+  border-radius: 20px 20px 0px 0px;
+}
+
+.solopage_info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  background-color: var(--dark_gray);
+  color: white;
+  padding: 20px;
+  padding-bottom: 40px;
+  width: 640px;
+  border-radius: 0px 0px 20px 20px;
+}
+
+.solopage_title {
+  font-size: 3rem;
+  text-align: center;
+}
+
+.solopage_publisher {
+  font-size: 1rem;
+}
+
+.solopage_price {
+  font-size: 2.5rem;
+}
+
+.solopage_cart_button,
+.game_cart_button,
+.checkout_button {
+  font-size: 1.5rem;
+  font-family: inherit;
+  padding: 10px;
+  width: 100%;
+  border-radius: 10px;
+  background-color: var(--green_rating);
+  color: black;
+  cursor: pointer;
+  border: 2px solid black;
+}
+
+.game_cart_button {
+  font-size: 1rem;
+  margin-top: 15px;
+  padding: 5px;
+  border-radius: 7px;
+  border: none;
+}
+
+.checkout_button {
+  width: 1000px;
+}
+
+.solopage_cart_button:hover,
+.game_cart_button:hover,
+.checkout_button:hover {
+  background-color: var(--light_green_rating);
+}
+
+.solopage_cart_button:active,
+.game_cart_button:active,
+.checkout_button:active {
+  background-color: black;
+  color: white;
+}
+
+.cart_section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 50px;
+  height: 100%;
+  margin-top: 50px;
+}
+
+.cart_games_section {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  height: 100%;
+}
+
+.cart_game {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  height: 100%;
+}
+
+.cart_game_container {
+  display: flex;
+  gap: 20px;
+  padding: 5px;
+  padding-right: 20px;
+  background-color: var(--dark_gray);
+  color: white;
+  border-radius: 10px;
+  height: 100%;
+  width: 1000px;
+}
+
+.cart_game_img {
+  border-radius: 10px;
+}
+
+.cart_game_details {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+  padding: 10px 0px;
+}
+
+.seperator {
+  height: 100%;
+  margin-bottom: auto;
+}
+
+.cart_game_title {
+  font-size: 2rem;
+}
+
+.cart_game_publisher {
+  margin-top: 5px;
+}
+
+.cart_game_price {
+  width: 100%;
+  font-size: 1.5rem;
+  font-weight: 100;
+  text-align: end;
+}
+
+.total_section {
+  text-align: center;
+}
+
+.total_title {
+  font-size: 3rem;
+  font-weight: 100;
+  text-align: center;
+}
+
+.total_price {
+  font-size: 3.5rem;
+  text-align: center;
+}
+
+.cart_game_actions {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  height: 100%;
+}
+
+.change_quantity,
+.fa-trash-can {
+  font-size: 1.5rem;
+}
+
+.change_quantity {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.quantity {
+  margin-right: 1px;
+}
+
+.fa-caret-up,
+.fa-caret-down,
+.fa-trash-can {
+  border: 2px solid black;
+  border-radius: 999px;
+  cursor: pointer;
+}
+
+.fa-caret-up:hover,
+.fa-caret-down:hover,
+.fa-trash-can:hover {
+  background-color: var(--dark_gray);
+  color: white;
+}
+
+.fa-caret-up,
+.fa-caret-down {
+  padding: 7px 12px;
+}
+
+.fa-trash-can {
+  padding: 14px 15px;
+}
+
+.checkout_buttons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 50px;
+}
+
+.checkout_yes {
+  background-color: var(--green_rating);
+  cursor: pointer;
+}
+
+.checkout_no {
+  cursor: pointer;
+}
+
+.checkout_no:hover {
+  background-color: rgb(235, 235, 235);
+}
+
+.checkout_yes:hover {
+  background-color: var(--light_green_rating);
+}
+
+.checkout_yes:active {
+  background-color: black;
+  color: white;
+}
+
+.checkout_price {
+  text-align: center;
+  font-size: 3rem;
+}
+
+#checkout {
+  height: 100vh;
+}
+
+.checkout_main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 50%;
+}
