@@ -138,7 +138,7 @@ if (registerForm) {
     alert("You have successfully registered your account!");
 
     // Redirects the user to the login page
-    window.location.href = "login.html";
+    window.location.href = "index.html";
   });
 }
 
@@ -234,7 +234,7 @@ const updateCartCookie = () => {
   const username = getCookie("username");
   if (!username) {
     alert("Please log in to update your cart.");
-    window.location.href = "login.html";
+    window.location.href = "index.html";
     return;
   }
 
@@ -263,7 +263,7 @@ const addToCart = (game) => {
   const username = getCookie("username");
   if (!username) {
     alert("Please log in to add items to your cart.");
-    window.location.href = "login.html";
+    window.location.href = "index.html";
     return;
   }
 
@@ -278,7 +278,7 @@ const loadCartFromCookies = () => {
   const username = getCookie("username");
   if (!username) {
     alert("You must be logged in to proceed.");
-    window.location.href = "login.html";
+    window.location.href = "index.html";
     return;
   }
 
@@ -476,7 +476,7 @@ const resetCartCookies = () => {
 
 // Initialize cart data when the page loads
 document.addEventListener("DOMContentLoaded", () => {
-  const excludedPages = ["/login.html", "/register.html"];
+  const excludedPages = ["/index.html", "/register.html"];
   const currentPath = window.location.pathname;
 
   if (!excludedPages.includes(currentPath)) {
@@ -513,7 +513,7 @@ const logout = () => {
     "total_price=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/";
 
   // Redirect to the login page
-  window.location.href = "login.html";
+  window.location.href = "index.html";
 };
 
 if (logOutButton) {
