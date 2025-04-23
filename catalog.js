@@ -278,7 +278,7 @@ const loadCartFromCookies = () => {
   const username = getCookie("username");
   if (!username) {
     alert("You must be logged in to proceed.");
-    window.location.href = "index.html";
+    window.location.href = "register.html";
     return;
   }
 
