@@ -276,11 +276,6 @@ const addToCart = (game) => {
 const loadCartFromCookies = () => {
   // Checks if the user is still logged in
   const username = getCookie("username");
-/*   if (!username) {
-    alert("You must be logged in to proceed.");
-    window.location.href = "register.html";
-    return;
-  } */
 
   // Cart cookie authentication
   const cartCookie = getCookie(`${username}_cart`);
